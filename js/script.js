@@ -71,8 +71,8 @@ function renderPhones() {
           
           <!-- Price -->
           <div class="mt-2.5 flex items-end justify-center gap-3">
-            <div class="text-2xl font-bold text-white leading-none drop-shadow-lg">$${p.price}</div>
-            <div class="text-sm text-white/60 line-through">$${p.original}</div>
+            <div class="text-2xl font-bold text-white leading-none drop-shadow-lg">${p.price}Bs.</div>
+            <div class="text-sm text-white/60 line-through">${p.original}Bs.</div>
           </div>
         </div>
       </div>
@@ -181,19 +181,19 @@ document.getElementById('heroSearch').addEventListener('keydown', e => {
 
 // Search Hero
 const btnSearchHero = document.getElementById('btnSearchHero');
-if(btnSearchHero) {
+if (btnSearchHero) {
   btnSearchHero.addEventListener('click', scrollToListings);
 }
 
 // Global Order Button
 const btnContactWhatsApp = document.getElementById('btnContactWhatsApp');
-if(btnContactWhatsApp) {
+if (btnContactWhatsApp) {
   btnContactWhatsApp.addEventListener('click', () => sendToWhatsApp(1));
 }
 
 // Close Detail Modal
 const btnCloseDetail = document.getElementById('btnCloseDetail');
-if(btnCloseDetail) {
+if (btnCloseDetail) {
   btnCloseDetail.addEventListener('click', closeDetail);
 }
 
@@ -203,7 +203,7 @@ document.getElementById('phoneGrid').addEventListener('click', (e) => {
   if (!btn) return;
   const action = btn.dataset.action;
   const id = Number(btn.dataset.id);
-  
+
   if (action === 'view') {
     openDetail(id);
   } else if (action === 'order') {
