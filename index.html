@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReMobile — Buy & Sell Second-Hand Phones</title>
+    <title>Sabores Biobío — Descubre Sabores Locales</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.0.0/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/tailwind.config.js"></script>
 </head>
 
-<body class="bg-slate-50 text-slate-800">
+<body class="bg-bone-white text-deep-coffee">
 
     <!-- NAV -->
-    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-lg border-b border-slate-200">
+    <nav class="sticky top-0 z-40 bg-white/90 backdrop-blur-lg border-b border-ice-grey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-2">
-                <img src="assets/images/logo.jpeg" alt="Logo Sabores Biobío"
+                <img src="assets/images/pagina/logo.png" alt="Logo Sabores Biobío"
                     class="h-10 w-auto rounded-md object-contain" />
                 <span
-                    class="text-xl font-bold tracking-tight bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Sabores
-                    Biobio</span>
+                    class="text-xl font-bold tracking-tight bg-gradient-to-r from-sage-olive to-soft-terracotta bg-clip-text text-transparent">SABORES
+                    BIO BIO</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="#listings" class="hover:text-indigo-600 transition">Buy</a>
-                <a href="#sell" class="hover:text-indigo-600 transition">Sell</a>
-                <a href="#how" class="hover:text-indigo-600 transition">How it Works</a>
-                <a href="#brands" class="hover:text-indigo-600 transition">Brands</a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-mauve-brown">
+                <a href="#listings" class="hover:text-sage-olive transition">PRODUCTOS</a>
+                <a href="#brands" class="hover:text-sage-olive transition">CATEGORIAS</a>
+                <a href="#how" class="hover:text-sage-olive transition">PASOS PARA COMPRAR</a>
+                <a href="#sell" class="hover:text-sage-olive transition">PEDIDOS</a>
+
             </div>
             <div class="flex items-center gap-3">
 
@@ -36,139 +41,155 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero-gradient text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-20"
-            style="background-image:url('https://image.qwenlm.ai/public_source/a5f461af-a234-4d00-a687-6981758f7da0/1402577dc-f63f-46ba-8779-2fcd80e69ab0.png'); background-size:cover; background-position:center;">
-        </div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-            <div class="slide-up">
-                <span class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full text-xs font-medium mb-5">
-                    <span class="w-2 h-2 rounded-full bg-green-400 pulse-dot"></span>
-                    12,400+ phones sold this month
+    <section class="hero-gradient text-white relative overflow-hidden min-h-[calc(100vh-80px)] flex items-center">
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="assets/video/portada01.mp4" type="video/mp4" />
+        </video>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-20 flex w-full z-10">
+            <div class="slide-up max-w-4xl">
+                <span
+                    class="inline-flex items-center gap-2 glass px-3 py-1 rounded-full text-xs font-bold mb-5 tracking-widest uppercase drop-shadow-md">
+                    <span class="w-2 h-2 rounded-full bg-sage-olive pulse-dot"></span>
+                    12,400+ productos vendidos este mes
                 </span>
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-                    Buy & Sell <span
-                        class="bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">Pre-Owned</span>
-                    Phones
+                <h1
+                    class="hero-title text-5xl md:text-[5rem] lg:text-[6rem] leading-[1] text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] mb-6">
+                    Descubre Sabores <span
+                        class="bg-gradient-to-r from-soft-terracotta to-sandy-yellow bg-clip-text text-transparent">Artesanales</span>
+                    Locales
                 </h1>
-                <p class="mt-5 text-lg text-indigo-100 max-w-xl">The trusted marketplace for second-hand smartphones.
-                    Verified devices, warranty included, up to 60% off retail.</p>
+                <p class="mt-5 text-lg text-white max-w-xl drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)] font-medium">El mejor
+                    lugar para encontrar productos artesanales y repostería.
+                    Ingredientes orgánicos, recetas tradicionales y sabor inigualable.</p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-3">
                     <div class="flex-1 relative">
-                        <svg class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" fill="none"
+                        <svg class="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-mauve-brown/70" fill="none"
                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
-                        <input id="heroSearch" type="text" placeholder="Search iPhone, Samsung, Pixel..."
-                            class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
+                        <input id="heroSearch" type="text" placeholder="Buscar mermeladas, pan de masa madre, café..."
+                            class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-white text-deep-coffee placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-soft-terracotta" />
                     </div>
-                    <button onclick="scrollToListings()"
-                        class="bg-white text-indigo-700 font-semibold px-6 py-3.5 rounded-xl hover:bg-indigo-50 transition">Search
-                        Phones</button>
+                    <button id="btnSearchHero"
+                        class="btn-primary bg-bone-white text-dark-olive hover:bg-ice-grey transition">Buscar
+                        producto</button>
                 </div>
-                <div class="mt-8 flex flex-wrap gap-6 text-sm">
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-green-300" fill="currentColor"
+                <div
+                    class="mt-8 flex flex-wrap gap-6 text-sm font-bold tracking-wide drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
+                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-sandy-yellow" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                        </svg> 30-day warranty</div>
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-green-300" fill="currentColor"
+                        </svg> 100% Orgánico</div>
+                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-sandy-yellow" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                        </svg> Free shipping</div>
-                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-green-300" fill="currentColor"
+                        </svg> Envíos locales</div>
+                    <div class="flex items-center gap-2"><svg class="w-5 h-5 text-sandy-yellow" fill="currentColor"
                             viewBox="0 0 20 20">
                             <path
                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
-                        </svg> Verified sellers</div>
+                        </svg> Productores verificados</div>
                 </div>
-            </div>
-            <div class="hidden md:block relative">
-                <div class="absolute -top-10 -right-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl opacity-30"></div>
-                <div class="absolute -bottom-10 -left-10 w-72 h-72 bg-indigo-500 rounded-full blur-3xl opacity-30">
-                </div>
-                <img src="https://image.qwenlm.ai/public_source/a5f461af-a234-4d00-a687-6981758f7da0/1402577dc-f63f-46ba-8779-2fcd80e69ab0.png"
-                    class="relative rounded-3xl shadow-2xl" alt="phones" />
             </div>
         </div>
     </section>
 
     <!-- STATS -->
-    <section class="bg-white border-b border-slate-200">
+    <section class="bg-white border-b border-ice-grey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-                <div class="text-3xl font-bold text-indigo-600">50K+</div>
-                <div class="text-sm text-slate-500 mt-1">Phones Sold</div>
+                <div class="text-3xl font-bold text-sage-olive">50K+</div>
+                <div class="text-sm text-mauve-brown mt-1">Locales Sold</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-indigo-600">98%</div>
-                <div class="text-sm text-slate-500 mt-1">Happy Buyers</div>
+                <div class="text-3xl font-bold text-sage-olive">98%</div>
+                <div class="text-sm text-mauve-brown mt-1">Clientes Felices</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-indigo-600">30d</div>
-                <div class="text-sm text-slate-500 mt-1">Warranty</div>
+                <div class="text-3xl font-bold text-sage-olive">30d</div>
+                <div class="text-sm text-mauve-brown mt-1">Artesanal</div>
             </div>
             <div>
-                <div class="text-3xl font-bold text-indigo-600">60%</div>
-                <div class="text-sm text-slate-500 mt-1">Avg. Savings</div>
+                <div class="text-3xl font-bold text-sage-olive">60%</div>
+                <div class="text-sm text-mauve-brown mt-1">Calidad</div>
             </div>
         </div>
     </section>
 
     <!-- BRANDS -->
     <section id="brands" class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
+        <h1 class="hero-title text-5xl md:text-[1rem] lg:text-[2rem] leading-[1] text-b mb-6">
+            Compra por Categoria
+        </h1>
         <div class="flex items-end justify-between mb-6">
             <div>
-                <h2 class="text-3xl font-bold">Shop by Brand</h2>
-                <p class="text-slate-500 mt-1">Browse the most popular brands</p>
+                <p class="text-mauve-brown mt-1">Explora nuestros productos más populares</p>
             </div>
         </div>
-        <div class="flex gap-3 overflow-x-auto scroll-hide pb-2" id="brandChips">
+        <div class="flex gap-4 overflow-x-auto scroll-hide pb-6 pt-2 snap-x" id="brandChips">
             <button
-                class="brand-chip active whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="all">All Brands</button>
+                class="brand-chip active flex-shrink-0 snap-start px-8 py-6 md:px-10 md:py-8 rounded-[20px] bg-dark-olive text-white font-bold shadow-md hover:shadow-lg transition text-lg relative overflow-hidden"
+                data-brand="all">
+                <span class="relative z-10">Todo</span>
+            </button>
             <button
-                class="brand-chip whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="Apple">Apple</button>
+                class="brand-chip flex-shrink-0 snap-start px-8 py-6 md:px-10 md:py-8 rounded-[20px] bg-ice-grey text-white font-bold shadow-md hover:shadow-lg transition text-lg relative overflow-hidden bg-cover bg-center group bg-brand-oro"
+                data-brand="oro">
+                <div class="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-dark-olive/90">
+                </div>
+                <span class="relative z-10 drop-shadow-md">Oro marron</span>
+            </button>
             <button
-                class="brand-chip whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="Samsung">Samsung</button>
+                class="brand-chip flex-shrink-0 snap-start px-8 py-6 md:px-10 md:py-8 rounded-[20px] bg-ice-grey text-white font-bold shadow-md hover:shadow-lg transition text-lg relative overflow-hidden bg-cover bg-center group bg-brand-harina"
+                data-brand="harina">
+                <div class="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-dark-olive/90">
+                </div>
+                <span class="relative z-10 drop-shadow-md">mas sabor, menos calorias</span>
+            </button>
             <button
-                class="brand-chip whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="Google">Google</button>
+                class="brand-chip flex-shrink-0 snap-start px-8 py-6 md:px-10 md:py-8 rounded-[20px] bg-ice-grey text-white font-bold shadow-md hover:shadow-lg transition text-lg relative overflow-hidden bg-cover bg-center group bg-brand-frescor"
+                data-brand="frescor">
+                <div class="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-dark-olive/90">
+                </div>
+                <span class="relative z-10 drop-shadow-md">Frescor amazonico</span>
+            </button>
             <button
-                class="brand-chip whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="OnePlus">OnePlus</button>
-            <button
-                class="brand-chip whitespace-nowrap px-5 py-2.5 rounded-full bg-slate-100 text-slate-700 font-medium"
-                data-brand="Xiaomi">Xiaomi</button>
+                class="brand-chip flex-shrink-0 snap-start px-8 py-6 md:px-10 md:py-8 rounded-[20px] bg-ice-grey text-white font-bold shadow-md hover:shadow-lg transition text-lg relative overflow-hidden bg-cover bg-center group bg-brand-aceite"
+                data-brand="aceite">
+                <div class="absolute inset-0 bg-black/50 transition-colors duration-300 group-hover:bg-dark-olive/90">
+                </div>
+                <span class="relative z-10 drop-shadow-md">Aceites alma amazonica</span>
+            </button>
         </div>
     </section>
 
     <!-- LISTINGS -->
     <section id="listings" class="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <h2 class="text-3xl font-bold">Featured Listings</h2>
+            <h1 class="hero-title text-5xl md:text-[1rem] lg:text-[2rem] leading-[1] text-b mb-6">
+                PRODUCTOS DESTACADOS
+            </h1>
             <div class="flex flex-wrap gap-2">
                 <select id="conditionFilter"
-                    class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                    <option value="all">All Conditions</option>
-                    <option value="Like New">Like New</option>
-                    <option value="Good">Good</option>
-                    <option value="Fair">Fair</option>
+                    class="px-4 py-2 rounded-lg bg-white border border-ice-grey text-sm font-medium focus:outline-none focus:ring-2 focus:ring-soft-terracotta">
+                    <option value="all">Todo Tipo</option>
+                    <option value="Orgánico">Orgánico</option>
+                    <option value="Artesanal">Artesanal</option>
+                    <option value="Tradicional">Tradicional</option>
                 </select>
                 <select id="priceFilter"
-                    class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                    <option value="all">Any Price</option>
+                    class="px-4 py-2 rounded-lg bg-white border border-ice-grey text-sm font-medium focus:outline-none focus:ring-2 focus:ring-soft-terracotta">
+                    <option value="all">Cualquier Precio</option>
                     <option value="0-300">Under $300</option>
                     <option value="300-600">$300 – $600</option>
                     <option value="600-1000">$600 – $1000</option>
                     <option value="1000-9999">$1000+</option>
                 </select>
                 <select id="sortFilter"
-                    class="px-4 py-2 rounded-lg bg-white border border-slate-200 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                    class="px-4 py-2 rounded-lg bg-white border border-ice-grey text-sm font-medium focus:outline-none focus:ring-2 focus:ring-soft-terracotta">
                     <option value="featured">Featured</option>
                     <option value="priceLow">Price: Low to High</option>
                     <option value="priceHigh">Price: High to Low</option>
@@ -176,57 +197,120 @@
             </div>
         </div>
         <div id="phoneGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
-        <div id="noResults" class="hidden text-center py-16 text-slate-500">
-            <svg class="w-16 h-16 mx-auto text-slate-300 mb-4" fill="none" stroke="currentColor" stroke-width="1.5"
+        <div id="noResults" class="hidden text-center py-16 text-mauve-brown">
+            <svg class="w-16 h-16 mx-auto text-ice-grey mb-4" fill="none" stroke="currentColor" stroke-width="1.5"
                 viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            <p class="text-lg font-medium">No phones match your filters</p>
+            <p class="text-lg font-medium">No se encontraron productos</p>
             <p class="text-sm mt-1">Try adjusting your search criteria</p>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
-                <p class="text-slate-500 mt-3">Buying or selling a pre-owned phone has never been easier.</p>
+    <section id="how" class="bg-white border-y border-ice-grey relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-24 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-800">Pasos para comprar</h2>
+                <p class="text-mauve-brown mt-4 text-lg">Disfrutar de nuestros productos artesanales es fácil, rápido y
+                    seguro.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-indigo-100 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2"
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 relative">
+                <!-- Decorative line behind steps for desktop -->
+                <div class="hidden md:block absolute top-10 left-[10%] right-[10%] h-1 bg-ice-grey -z-10 rounded-full">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="text-center relative group">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-white border-4 border-ice-grey flex items-center justify-center mb-5 group-hover:border-soft-terracotta group-hover:scale-105 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-soft-terracotta" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">1. Browse or List</h3>
-                    <p class="text-slate-500 text-sm">Explore thousands of verified phones or list yours in under 2
-                        minutes.</p>
+                    <div
+                        class="bg-ice-grey/30 rounded-2xl p-5 h-full border border-transparent group-hover:border-soft-terracotta/20 transition-colors">
+                        <span class="text-soft-terracotta font-black text-2xl mb-2 block">1</span>
+                        <p class="text-slate-700 font-semibold text-sm leading-tight">Buscar el producto según las
+                            líneas disponibles.</p>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-purple-100 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" stroke-width="2"
+
+                <!-- Step 2 -->
+                <div class="text-center relative group">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-white border-4 border-ice-grey flex items-center justify-center mb-5 group-hover:border-sage-olive group-hover:scale-105 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-sage-olive" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </div>
+                    <div
+                        class="bg-ice-grey/30 rounded-2xl p-5 h-full border border-transparent group-hover:border-sage-olive/20 transition-colors">
+                        <span class="text-sage-olive font-black text-2xl mb-2 block">2</span>
+                        <p class="text-slate-700 font-semibold text-sm leading-tight">Verificar todo el detalle en la
+                            sección VER.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center relative group">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-white border-4 border-ice-grey flex items-center justify-center mb-5 group-hover:border-sandy-yellow group-hover:scale-105 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-sandy-yellow" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">2. Verified & Secure</h3>
-                    <p class="text-slate-500 text-sm">Every device is inspected. Payments are protected with escrow.</p>
+                    <div
+                        class="bg-ice-grey/30 rounded-2xl p-5 h-full border border-transparent group-hover:border-sandy-yellow/20 transition-colors">
+                        <span class="text-sandy-yellow font-black text-2xl mb-2 block">3</span>
+                        <p class="text-slate-700 font-semibold text-sm leading-tight">Seleccionar el producto y escribir
+                            al WhatsApp de la empresa.</p>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 mx-auto rounded-2xl bg-green-100 flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2"
+
+                <!-- Step 4 -->
+                <div class="text-center relative group">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-white border-4 border-ice-grey flex items-center justify-center mb-5 group-hover:border-deep-coffee group-hover:scale-105 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-deep-coffee" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                         </svg>
                     </div>
-                    <h3 class="font-bold text-lg mb-2">3. Delivered Fast</h3>
-                    <p class="text-slate-500 text-sm">Free shipping, 30-day warranty, and 14-day returns on every order.
-                    </p>
+                    <div
+                        class="bg-ice-grey/30 rounded-2xl p-5 h-full border border-transparent group-hover:border-deep-coffee/20 transition-colors">
+                        <span class="text-deep-coffee font-black text-2xl mb-2 block">4</span>
+                        <p class="text-slate-700 font-semibold text-sm leading-tight">Pagar y enviar el comprobante de
+                            pago.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="text-center relative group">
+                    <div
+                        class="w-20 h-20 mx-auto rounded-full bg-white border-4 border-ice-grey flex items-center justify-center mb-5 group-hover:border-dark-olive group-hover:scale-105 transition-all duration-300 shadow-sm">
+                        <svg class="w-8 h-8 text-dark-olive" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </div>
+                    <div
+                        class="bg-ice-grey/30 rounded-2xl p-5 h-full border border-transparent group-hover:border-dark-olive/20 transition-colors">
+                        <span class="text-dark-olive font-black text-2xl mb-2 block">5</span>
+                        <p class="text-slate-700 font-semibold text-sm leading-tight">La entrega es según coordinación.
+                            Se hacen envíos a otros departamentos.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -235,52 +319,76 @@
     <!-- SELL CTA -->
     <section id="sell" class="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div
-            class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-10 md:p-16 text-white">
-            <div class="absolute -top-20 -right-20 w-80 h-80 bg-white opacity-10 rounded-full blur-3xl"></div>
-            <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-white opacity-10 rounded-full blur-3xl"></div>
-            <div class="relative grid md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">Got an old phone? Turn it into cash.
-                    </h2>
-                    <p class="mt-4 text-lg text-indigo-100">List your device in minutes. Get paid fast. Join thousands
-                        of sellers on ReMobile.</p>
-                    <button onclick="openSellModal()"
-                        class="mt-8 bg-white text-indigo-700 font-bold px-8 py-4 rounded-xl hover:bg-indigo-50 transition shadow-xl">List
-                        Your Phone</button>
-                </div>
-                <div class="hidden md:flex justify-center">
-                    <img src="https://image.qwenlm.ai/public_source/a5f461af-a234-4d00-a687-6981758f7da0/1f1e8f6ac-6be0-4efc-9c32-6879a55c3beb.png"
-                        class="rounded-2xl shadow-2xl max-w-sm" alt="sell phone" />
-                </div>
+            class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-sage-olive via-dark-olive to-deep-coffee text-white min-h-[400px] flex items-center">
+            <div class="absolute -top-20 -left-20 w-80 h-80 bg-white opacity-10 rounded-full blur-3xl"></div>
+
+            <div class="relative z-10 w-full md:w-1/2 p-10 md:p-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold leading-tight">¿Quieres disfrutar de nuestros sabores?
+                </h2>
+                <p class="mt-4 text-lg text-white/90 font-medium">Haz tu pedido rápidamente. Escanea el código a la
+                    derecha o contáctanos por WhatsApp para disfrutar de nuestros productos artesanales.</p>
+                <button id="btnContactWhatsApp"
+                    class="mt-8 bg-white text-dark-olive font-bold px-8 py-4 rounded-xl hover:bg-slate-100 transition shadow-xl">Contactar
+                    por WhatsApp</button>
+            </div>
+
+            <div class="absolute top-0 right-0 w-1/2 h-full flex justify-end p-6 md:p-0">
+                <img src="assets/images/pagina/qr.png" class="w-full h-full object-contain object-right"
+                    alt="QR Code" />
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-300">
+    <footer class="bg-deep-coffee text-ice-grey">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid md:grid-cols-4 gap-10">
             <div>
                 <div class="flex items-center gap-2 mb-4">
                     <div
-                        class="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                        class="w-9 h-9 rounded-xl bg-gradient-to-br from-sage-olive to-dark-olive flex items-center justify-center">
                         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2.5"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <span class="text-xl font-bold text-white">ReMobile</span>
+                    <span class="text-xl font-bold text-white">Sabores Biobío</span>
                 </div>
-                <p class="text-sm text-slate-400">The trusted marketplace for pre-owned smartphones. Buy smart, sell
-                    easy.</p>
+                <p class="text-sm text-mauve-brown/70 mb-5">Consumir productos amazónicos ayuda a conservar el bosque.
+                </p>
+                <div class="flex items-center gap-4">
+                    <!-- Facebook -->
+                    <a href="#" class="text-mauve-brown/70 hover:text-white transition-colors" aria-label="Facebook">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="#" class="text-mauve-brown/70 hover:text-white transition-colors" aria-label="Instagram">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <!-- Twitter / X -->
+                    <a href="#" class="text-mauve-brown/70 hover:text-white transition-colors" aria-label="Twitter X">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div>
                 <h4 class="text-white font-semibold mb-3">Marketplace</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Buy Phones</a></li>
-                    <li><a href="#" class="hover:text-white">Sell Phones</a></li>
-                    <li><a href="#" class="hover:text-white">Trade-In</a></li>
-                    <li><a href="#" class="hover:text-white">Refurbished</a></li>
+                    <li><a href="#" class="hover:text-white">Buy Locales</a></li>
+                    <li><a href="#" class="hover:text-white">Sell Locales</a></li>
+                    <li><a href="#" class="hover:text-white">Nosotros</a></li>
+                    <li><a href="#" class="hover:text-white">Contacto</a></li>
                 </ul>
             </div>
             <div>
@@ -296,16 +404,16 @@
                 <h4 class="text-white font-semibold mb-3">Support</h4>
                 <ul class="space-y-2 text-sm">
                     <li><a href="#" class="hover:text-white">Help Center</a></li>
-                    <li><a href="#" class="hover:text-white">Warranty</a></li>
+                    <li><a href="#" class="hover:text-white">Artesanal</a></li>
                     <li><a href="#" class="hover:text-white">Returns</a></li>
                     <li><a href="#" class="hover:text-white">Contact</a></li>
                 </ul>
             </div>
         </div>
-        <div class="border-t border-slate-800">
+        <div class="border-t border-mauve-brown/30">
             <div
-                class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-                <p>© 2026 ReMobile. All rights reserved.</p>
+                class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row justify-between items-center text-sm text-mauve-brown">
+                <p>© 2026 Sabores Biobío. All rights reserved.</p>
                 <div class="flex gap-6 mt-3 md:mt-0"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a>
                 </div>
             </div>
@@ -315,9 +423,9 @@
     <!-- PHONE DETAIL MODAL -->
     <div id="detailModal" class="fixed inset-0 z-50 hidden modal-bg items-center justify-center p-4">
         <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto slide-up">
-            <div class="sticky top-0 bg-white border-b border-slate-200 p-4 flex justify-between items-center">
-                <h3 class="font-bold text-lg" id="detailTitle">Phone Details</h3>
-                <button onclick="closeDetail()" class="p-2 hover:bg-slate-100 rounded-lg">
+            <div class="sticky top-0 bg-white border-b border-ice-grey p-4 flex justify-between items-center">
+                <h3 class="font-bold text-lg" id="detailTitle">Detalles del Producto</h3>
+                <button id="btnCloseDetail" class="p-2 hover:bg-ice-grey rounded-lg">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -327,101 +435,11 @@
         </div>
     </div>
 
-    <!-- SELL MODAL -->
-    <div id="sellModal" class="fixed inset-0 z-50 hidden modal-bg items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto slide-up">
-            <div class="sticky top-0 bg-white border-b border-slate-200 p-4 flex justify-between items-center">
-                <h3 class="font-bold text-lg">List Your Phone</h3>
-                <button onclick="closeSellModal()" class="p-2 hover:bg-slate-100 rounded-lg">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <form id="sellForm" class="p-6 space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Brand</label>
-                    <select id="sellBrand" required
-                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                        <option value="">Select brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Google</option>
-                        <option>OnePlus</option>
-                        <option>Xiaomi</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Model</label>
-                    <input id="sellModel" type="text" required placeholder="e.g. iPhone 14 Pro"
-                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Storage</label>
-                        <select id="sellStorage" required
-                            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                            <option value="">Select</option>
-                            <option>64GB</option>
-                            <option>128GB</option>
-                            <option>256GB</option>
-                            <option>512GB</option>
-                            <option>1TB</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium mb-1">Condition</label>
-                        <select id="sellCondition" required
-                            class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400">
-                            <option value="">Select</option>
-                            <option>Like New</option>
-                            <option>Good</option>
-                            <option>Fair</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Asking Price ($)</label>
-                    <input id="sellPrice" type="number" min="1" required
-                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400" />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Description</label>
-                    <textarea id="sellDesc" rows="3" placeholder="Describe your phone..."
-                        class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition">Publish
-                    Listing</button>
-            </form>
-        </div>
-    </div>
 
-    <!-- CART DRAWER -->
-    <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
-        <div class="absolute inset-0 bg-black/50" onclick="toggleCart()"></div>
-        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl slide-up flex flex-col">
-            <div class="p-5 border-b border-slate-200 flex justify-between items-center">
-                <h3 class="font-bold text-lg">Your Cart</h3>
-                <button onclick="toggleCart()" class="p-2 hover:bg-slate-100 rounded-lg">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div id="cartItems" class="flex-1 overflow-y-auto p-5"></div>
-            <div class="border-t border-slate-200 p-5">
-                <div class="flex justify-between mb-3"><span class="font-medium">Subtotal</span><span id="cartTotal"
-                        class="font-bold text-lg">$0</span></div>
-                <button onclick="checkout()"
-                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition">Checkout</button>
-            </div>
-        </div>
-    </div>
 
     <!-- TOAST -->
     <div id="toast"
-        class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-lg hidden z-50 text-sm font-medium">
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-deep-coffee text-white px-5 py-3 rounded-xl shadow-lg hidden z-50 text-sm font-medium">
     </div>
 
     <script src="js/script.js"></script>
