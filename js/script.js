@@ -1,16 +1,22 @@
+const defaultDesc = `<strong>Características:</strong> Producto elaborado con ingredientes 100% naturales, siguiendo recetas tradicionales de la región. Cuidadosamente seleccionado para garantizar la mejor calidad.
+<br><br>
+<strong>Beneficios:</strong> Alto contenido en nutrientes esenciales. Apoya el desarrollo sostenible y a los productores locales del Biobío. Sin preservantes ni colorantes artificiales.
+<br><br>
+<strong>Recetas y Usos:</strong> Ideal para disfrutar en el desayuno o la once. Puedes combinarlo con pan de masa madre, quesos maduros o simplemente disfrutarlo solo. ¡Dale un toque especial a tus comidas!`;
+
 const PHONES = [
-  { id: 1, brand: 'oro', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
-  { id: 2, brand: 'harina', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
-  { id: 3, brand: 'frescor', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (3).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
-  { id: 4, brand: 'aceite', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (4).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
-  { id: 5, brand: 'oro', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (5).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
-  { id: 6, brand: 'harina', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (6).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
-  { id: 7, brand: 'frescor', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (7).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
-  { id: 8, brand: 'aceite', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (8).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
-  { id: 9, brand: 'oro', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (9).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
-  { id: 10, brand: 'harina', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
-  { id: 11, brand: 'frescor', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
-  { id: 12, brand: 'aceite', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (3).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
+  { id: 1, brand: 'oro', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100, desc: defaultDesc },
+  { id: 2, brand: 'harina', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100, desc: defaultDesc },
+  { id: 3, brand: 'frescor', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (3).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100, desc: defaultDesc },
+  { id: 4, brand: 'aceite', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (4).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100, desc: defaultDesc },
+  { id: 5, brand: 'oro', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (5).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100, desc: defaultDesc },
+  { id: 6, brand: 'harina', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (6).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100, desc: defaultDesc },
+  { id: 7, brand: 'frescor', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (7).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100, desc: defaultDesc },
+  { id: 8, brand: 'aceite', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (8).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100, desc: defaultDesc },
+  { id: 9, brand: 'oro', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (9).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100, desc: defaultDesc },
+  { id: 10, brand: 'harina', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100, desc: defaultDesc },
+  { id: 11, brand: 'frescor', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100, desc: defaultDesc },
+  { id: 12, brand: 'aceite', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (3).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100, desc: defaultDesc },
 ];
 
 
@@ -93,35 +99,69 @@ function renderPhones() {
 function openDetail(id) {
   const p = PHONES.find(x => x.id === id);
   if (!p) return;
-  document.getElementById('detailTitle').textContent = p.model;
+
   document.getElementById('detailContent').innerHTML = `
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-slate-50 rounded-xl p-6 flex items-center justify-center">
-        <img src="${p.image}" class="max-h-80 object-contain" alt="${p.model}" />
-      </div>
-      <div>
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-sm text-slate-500">${p.brand}</span>
+    <div class="flex flex-col md:flex-row h-full">
+      <!-- Left side: Image -->
+      <div class="md:w-1/2 relative bg-black/30 p-8 flex items-center justify-center min-h-[300px]">
+        <img src="${p.image}" class="max-h-96 w-auto object-contain rounded-xl shadow-2xl transition-transform hover:scale-105 duration-500" alt="${p.model}" />
+        <div class="absolute top-6 left-6 z-10 drop-shadow-md">
           ${conditionBadge(p.condition)}
         </div>
-        <h2 class="text-2xl font-bold">${p.model}</h2>
-        <div class="flex items-center gap-2 mt-2">
-          <div class="flex"><svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg><svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0......"/></svg></div>
-          <span class="font-semibold">${p.rating}</span><span class="text-slate-400 text-sm">(${p.reviews} reviews)</span>
+      </div>
+      
+      <!-- Right side: Content -->
+      <div class="md:w-1/2 p-8 md:p-10 flex flex-col h-full bg-gradient-to-br from-[#1A332C] to-[#0f1f1a]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-sm text-white/60 font-medium uppercase tracking-wider">${p.brand}</span>
         </div>
-        <div class="mt-6 space-y-3">
-          <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Storage</span><span class="font-medium">${p.storage}</span></div>
-          <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Color</span><span class="font-medium">${p.color}</span></div>
-          <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Condition</span><span class="font-medium">${p.condition}</span></div>
-          <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Battery Health</span><span class="font-medium">${p.battery}%</span></div>
-          <div class="flex justify-between py-2 border-b border-slate-100"><span class="text-slate-500">Seller</span><span class="font-medium">${p.seller}</span></div>
+        
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-tight">${p.model}</h2>
+        
+        <div class="flex items-center gap-2 mt-2 mb-6">
+          
+          <span class="font-bold text-white">${p.rating}</span>
+          <span class="text-white/50 text-sm">(${p.reviews} reseñas)</span>
         </div>
-        <div class="mt-6 flex items-end gap-3">
-          <div><div class="text-3xl font-bold">$${p.price}</div><div class="text-sm text-slate-400 line-through">$${p.original}</div></div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
+          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+            <div class="text-white/50 mb-1">Cantidad</div>
+            <div class="font-bold text-white">${p.storage}</div>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+            <div class="text-white/50 mb-1">Variedad</div>
+            <div class="font-bold text-white">${p.color}</div>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+            <div class="text-white/50 mb-1">Elaboración</div>
+            <div class="font-bold text-white">${p.condition}</div>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+            <div class="text-white/50 mb-1">Productor</div>
+            <div class="font-bold text-white truncate" title="${p.seller}">${p.seller}</div>
+          </div>
         </div>
-        <button id="btnModalOrder" data-id="${p.id}" class="w-full mt-4 bg-soft-terracotta hover:bg-deep-coffee text-white font-semibold py-3 rounded-xl transition">Pedir por WhatsApp</button>
+        
+        <!-- Large Text Area for description -->
+        <div class="text-white/80 text-sm leading-relaxed mb-8 bg-white/5 p-5 rounded-xl border border-white/10 max-h-[160px] overflow-y-auto shadow-inner">
+          ${p.desc}
+        </div>
+
+        <!-- Price and Order Button -->
+        <div class="mt-auto pt-4 border-t border-white/10 flex items-center justify-between gap-6">
+          <div class="flex items-end gap-3">
+            <div class="text-4xl font-extrabold text-white drop-shadow-lg leading-none">${p.price}Bs.</div>
+            <div class="text-lg text-white/40 line-through mb-1">${p.original}Bs.</div>
+          </div>
+          <button id="btnModalOrder" data-id="${p.id}" class="flex-1 bg-[#D37B60] hover:bg-[#E59275] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group">
+            Pedir
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </button>
+        </div>
       </div>
     </div>`;
+
   document.getElementById('detailModal').classList.remove('hidden');
   document.getElementById('detailModal').classList.add('flex');
 }
