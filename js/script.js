@@ -1,16 +1,16 @@
 const PHONES = [
-  { id: 1, brand: 'Repostería', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
-  { id: 2, brand: 'Panadería', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
-  { id: 3, brand: 'Mermeladas', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (3).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
-  { id: 4, brand: 'Café', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (4).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
-  { id: 5, brand: 'Repostería', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (5).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
-  { id: 6, brand: 'Bebidas', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (6).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
-  { id: 7, brand: 'Repostería', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (7).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
-  { id: 8, brand: 'Panadería', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (8).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
-  { id: 9, brand: 'Mermeladas', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (9).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
-  { id: 10, brand: 'Café', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
-  { id: 11, brand: 'Repostería', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
-  { id: 12, brand: 'Bebidas', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (3).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
+  { id: 1, brand: 'oro', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
+  { id: 2, brand: 'harina', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
+  { id: 3, brand: 'frescor', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (3).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
+  { id: 4, brand: 'aceite', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (4).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
+  { id: 5, brand: 'oro', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (5).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
+  { id: 6, brand: 'harina', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (6).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
+  { id: 7, brand: 'frescor', model: 'Torta de Frambuesa', storage: '12 Porciones', color: 'Frambuesa', condition: 'Artesanal', price: 25, original: 30, image: 'assets/images/productos/producto (7).jpg', rating: 4.9, reviews: 124, seller: 'Pastelería Doña Rosa', battery: 100 },
+  { id: 8, brand: 'aceite', model: 'Pan de Masa Madre', storage: '1 Kg', color: 'Integral', condition: 'Orgánico', price: 8, original: 10, image: 'assets/images/productos/producto (8).jpg', rating: 4.8, reviews: 89, seller: 'El Horno', battery: 100 },
+  { id: 9, brand: 'oro', model: 'Mermelada de Mora', storage: '500g', color: 'Mora', condition: 'Artesanal', price: 6, original: 8, image: 'assets/images/productos/producto (9).jpg', rating: 4.7, reviews: 56, seller: 'Conservas del Sur', battery: 100 },
+  { id: 10, brand: 'harina', model: 'Café Tostado Premium', storage: '250g', color: 'Tueste Medio', condition: 'Orgánico', price: 12, original: 15, image: 'assets/images/productos/producto (1).jpg', rating: 4.9, reviews: 203, seller: 'Café Biobío', battery: 100 },
+  { id: 11, brand: 'frescor', model: 'Kuchen de Nuez', storage: '8 Porciones', color: 'Nuez y Manjar', condition: 'Tradicional', price: 18, original: 22, image: 'assets/images/productos/producto (2).jpg', rating: 4.8, reviews: 42, seller: 'Pastelería Alemana', battery: 100 },
+  { id: 12, brand: 'aceite', model: 'Jugo Natural Arándano', storage: '1 Litro', color: 'Arándano', condition: 'Orgánico', price: 5, original: 7, image: 'assets/images/productos/producto (3).jpg', rating: 4.6, reviews: 67, seller: 'Jugos del Valle', battery: 100 },
 ];
 
 
@@ -59,7 +59,7 @@ function renderPhones() {
         
         <!-- Top Badge -->
         <div class="absolute top-4 left-4 z-10 drop-shadow-md">
-          ${conditionBadge(p.brand)}
+          ${conditionBadge(p.condition)}
         </div>
 
         <!-- Content over image, centered like image 1 -->
