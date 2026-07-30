@@ -65,51 +65,89 @@ function openDetail(id) {
   const p = PHONES.find(x => x.id === id);
   if (!p) return;
 
+  // Parse description into 3 parts
+  const descParts = p.desc.split(/<br\s*\/?>\s*<br\s*\/?>/i);
+  let col1 = '', col2 = '', col3 = '';
+  
+  descParts.forEach(part => {
+    if (part.includes('Descripción:') || part.includes('Características:')) col1 = part.replace(/<strong>(Descripción|Características):<\/strong>\s*/i, '').trim();
+    else if (part.includes('Detalles:') || part.includes('Beneficios:')) col2 = part.replace(/<strong>(Detalles|Beneficios):<\/strong>\s*/i, '').trim();
+    else if (part.includes('Uso/Recetas:') || part.includes('Preparación:')) col3 = part.replace(/<strong>(Uso\/Recetas|Preparación):<\/strong>\s*/i, '').trim();
+    else if (!col1) col1 = part;
+  });
+
   document.getElementById('detailContent').innerHTML = `
-    <div class="flex flex-col md:flex-row h-full">
-      <!-- Left side: Image -->
-      <div class="md:w-1/2 relative bg-white overflow-hidden min-h-[300px] md:min-h-full rounded-t-[24px] md:rounded-tr-none md:rounded-l-[24px]">
-        <img src="${p.image}" class="absolute inset-0 w-full h-full object-cover transition-transform hover:scale-105 duration-500" alt="${p.model}" />
+    <div class="flex flex-col w-full h-full">
+      
+      <!-- TOP SECTION: Image and Basic Info -->
+      <div class="flex flex-col md:flex-row relative">
+        <!-- Left side: Image -->
+        <div class="md:w-[45%] relative bg-white overflow-hidden min-h-[300px] md:min-h-full rounded-t-[24px] md:rounded-tr-none md:rounded-tl-[24px]">
+          <img src="${p.image}" class="absolute inset-0 w-full h-full object-cover transition-transform hover:scale-105 duration-500" alt="${p.model}" />
+          <!-- Top Badge -->
+          <div class="absolute top-4 left-4 z-10">
+            <span class="bg-[#FDF3E7] text-[#6E5A4D] text-xs font-bold px-3 py-1 rounded-full shadow-md">${p.brand}</span>
+          </div>
+        </div>
         
-        <!-- Top Badge -->
-        <div class="absolute top-4 left-4 z-10">
-          <span class="bg-[#FDF3E7] text-[#6E5A4D] text-xs font-bold px-3 py-1 rounded-full shadow-md">${p.brand}</span>
+        <!-- Right side: Content -->
+        <div class="md:w-[55%] p-5 md:p-10 flex flex-col bg-gradient-to-br from-[#1A332C] to-[#0f1f1a] md:rounded-tr-[24px]">
+          <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-6 leading-tight mt-1 md:mt-2">${p.model}</h2>
+
+          <div class="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6 text-xs md:text-sm">
+            <div class="bg-white/5 p-2 md:p-3 rounded-xl border border-white/10 flex flex-col justify-center">
+              <div class="text-white/50 mb-0.5 md:mb-1">Presentación</div>
+              <div class="font-bold text-white leading-tight">${p.storage}</div>
+            </div>
+            <div class="bg-white/5 p-2 md:p-3 rounded-xl border border-white/10 flex flex-col justify-center">
+              <div class="text-white/50 mb-0.5 md:mb-1">Productor</div>
+              <div class="font-bold text-white truncate leading-tight" title="${p.seller}">${p.seller}</div>
+            </div>
+          </div>
+          
+          <!-- Price and Order Button -->
+          <div class="mt-2 md:mt-auto pt-3 md:pt-4 border-t border-white/10 flex items-center justify-between gap-4 md:gap-6">
+            <div class="flex items-end gap-3">
+              <div class="text-2xl md:text-4xl font-extrabold text-white drop-shadow-lg leading-none">${p.price}Bs.</div>
+            </div>
+            <button id="btnModalOrder" data-id="${p.id}" class="flex-1 bg-[#D37B60] hover:bg-[#E59275] text-white font-bold py-3 md:py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group text-sm md:text-base">
+              Pedir
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+          </div>
         </div>
       </div>
       
-      <!-- Right side: Content -->
-      <div class="md:w-1/2 p-8 md:p-10 flex flex-col h-full bg-gradient-to-br from-[#1A332C] to-[#0f1f1a]">
-        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight mt-2">${p.model}</h2>
-
-        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
-          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
-            <div class="text-white/50 mb-1">Presentación</div>
-            <div class="font-bold text-white">${p.storage}</div>
-          </div>
-          
-          
-          <div class="bg-white/5 p-3 rounded-xl border border-white/10">
-            <div class="text-white/50 mb-1">Productor</div>
-            <div class="font-bold text-white truncate" title="${p.seller}">${p.seller}</div>
-          </div>
-        </div>
+      <!-- BOTTOM SECTION: 3 Columns Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 p-5 md:p-10 bg-[#f8f9fa] rounded-b-[24px]">
         
-        <!-- Large Text Area for description -->
-        <div class="text-white/80 text-sm leading-relaxed mb-8 bg-white/5 p-5 rounded-xl border border-white/10 max-h-[160px] overflow-y-auto shadow-inner">
-          ${p.desc}
+        <!-- Column 1 -->
+        <div class="flex flex-col gap-2 md:gap-3">
+          <div class="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
+            <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#8E3255] text-white flex items-center justify-center text-lg md:text-2xl font-bold shrink-0 shadow-md">1</div>
+            <h3 class="text-base md:text-lg font-bold text-deep-coffee uppercase tracking-wide leading-tight">Ficha / Detalle</h3>
+          </div>
+          <div class="text-xs md:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap pl-10 md:pl-0">${col1 || 'Información no disponible.'}</div>
         </div>
 
-        <!-- Price and Order Button -->
-        <div class="mt-auto pt-4 border-t border-white/10 flex items-center justify-between gap-6">
-          <div class="flex items-end gap-3">
-            <div class="text-4xl font-extrabold text-white drop-shadow-lg leading-none">${p.price}Bs.</div>
-            
+        <!-- Column 2 -->
+        <div class="flex flex-col gap-2 md:gap-3">
+          <div class="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
+            <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#8E3255] text-white flex items-center justify-center text-lg md:text-2xl font-bold shrink-0 shadow-md">2</div>
+            <h3 class="text-base md:text-lg font-bold text-deep-coffee uppercase tracking-wide leading-tight">Cualidades</h3>
           </div>
-          <button id="btnModalOrder" data-id="${p.id}" class="flex-1 bg-[#D37B60] hover:bg-[#E59275] text-white font-bold py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group">
-            Pedir
-            <span class="group-hover:translate-x-1 transition-transform">→</span>
-          </button>
+          <div class="text-xs md:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap pl-10 md:pl-0">${col2 || 'Información no disponible.'}</div>
         </div>
+
+        <!-- Column 3 -->
+        <div class="flex flex-col gap-2 md:gap-3">
+          <div class="flex items-center gap-2 md:gap-3 mb-1 md:mb-2">
+            <div class="w-8 h-8 md:w-12 md:h-12 rounded-full bg-[#8E3255] text-white flex items-center justify-center text-lg md:text-2xl font-bold shrink-0 shadow-md">3</div>
+            <h3 class="text-base md:text-lg font-bold text-deep-coffee uppercase tracking-wide leading-tight">Recetas</h3>
+          </div>
+          <div class="text-xs md:text-sm text-slate-700 leading-relaxed whitespace-pre-wrap pl-10 md:pl-0">${col3 || 'Información no disponible.'}</div>
+        </div>
+
       </div>
     </div>`;
 
