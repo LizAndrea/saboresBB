@@ -18,6 +18,13 @@ with open('/opt/proyectos/saboresBioBio/saboresBB/assets/BD/Plantilla_catalogo.c
         if linea:
             lines.add(linea)
             
+        presentations = []
+        for i in range(1, 4):
+            weight = row.get(f'Presentación {i} (Peso)', '').strip()
+            price_str = row.get(f'Precio {i} (Bs.)', '').strip()
+            if weight and price_str:
+                presentations.append({'weight': weight, 'price': float(price_str)})
+                
         # mapping to PHONES structure
         prod = {
             'id': id_val,
@@ -25,6 +32,7 @@ with open('/opt/proyectos/saboresBioBio/saboresBB/assets/BD/Plantilla_catalogo.c
             'model': row.get('Producto', '').strip(),
             'storage': row.get('Presentación 1 (Peso)', '').strip(),
             'price': float(row.get('Precio 1 (Bs.)', 0)) if row.get('Precio 1 (Bs.)', '').strip() else 0,
+            'presentations': presentations,
             'image': f'assets/images/productos/{id_val}.jpg',
             'rating': 5.0,
             'reviews': 100,
@@ -38,5 +46,10 @@ with open('/opt/proyectos/saboresBioBio/saboresBB/categorias.json', 'w', encodin
 
 with open('/opt/proyectos/saboresBioBio/saboresBB/productos.json', 'w', encoding='utf-8') as f:
     json.dump(products, f, ensure_ascii=False, indent=2)
+
+with open('/opt/proyectos/saboresBioBio/saboresBB/js/data.js', 'w', encoding='utf-8') as f:
+    f.write('const PHONES = ')
+    json.dump(products, f, ensure_ascii=False, indent=2)
+    f.write(';')
 
 print("Parsed successfully!")

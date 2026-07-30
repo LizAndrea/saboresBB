@@ -94,12 +94,22 @@ function openDetail(id) {
         <div class="md:w-[55%] p-5 md:p-10 flex flex-col bg-gradient-to-br from-[#1A332C] to-[#0f1f1a] md:rounded-tr-[24px]">
           <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-3 md:mb-6 leading-tight mt-1 md:mt-2">${p.model}</h2>
 
-          <div class="grid grid-cols-2 gap-2 md:gap-4 mb-4 md:mb-6 text-xs md:text-sm">
-            <div class="bg-white/5 p-2 md:p-3 rounded-xl border border-white/10 flex flex-col justify-center">
-              <div class="text-white/50 mb-0.5 md:mb-1">Presentación</div>
-              <div class="font-bold text-white leading-tight">${p.storage}</div>
+          <div class="flex flex-col mb-4 md:mb-6">
+            <div class="text-white/50 mb-2 text-xs md:text-sm">Opciones Disponibles</div>
+            <div class="flex flex-col gap-2 max-h-48 overflow-y-auto pr-1">
+              ${p.presentations && p.presentations.length > 0 ? p.presentations.map(pres => `
+                <div class="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
+                  <div class="font-bold text-white text-sm md:text-base">${pres.weight}</div>
+                  <div class="font-extrabold text-[#D37B60] text-sm md:text-base">${pres.price} Bs.</div>
+                </div>
+              `).join('') : `
+                <div class="flex justify-between items-center bg-white/10 p-3 rounded-xl border border-white/10">
+                  <div class="font-bold text-white text-sm md:text-base">${p.storage}</div>
+                  <div class="font-extrabold text-[#D37B60] text-sm md:text-base">${p.price} Bs.</div>
+                </div>
+              `}
             </div>
-            <div class="bg-white/5 p-2 md:p-3 rounded-xl border border-white/10 flex flex-col justify-center">
+            <div class="mt-3 bg-white/5 p-2 md:p-3 rounded-xl border border-white/10 flex flex-col justify-center text-xs md:text-sm">
               <div class="text-white/50 mb-0.5 md:mb-1">Productor</div>
               <div class="font-bold text-white truncate leading-tight" title="${p.seller}">${p.seller}</div>
             </div>
@@ -107,11 +117,8 @@ function openDetail(id) {
           
           <!-- Price and Order Button -->
           <div class="mt-2 md:mt-auto pt-3 md:pt-4 border-t border-white/10 flex items-center justify-between gap-4 md:gap-6">
-            <div class="flex items-end gap-3">
-              <div class="text-2xl md:text-4xl font-extrabold text-white drop-shadow-lg leading-none">${p.price}Bs.</div>
-            </div>
-            <button id="btnModalOrder" data-id="${p.id}" class="flex-1 bg-[#D37B60] hover:bg-[#E59275] text-white font-bold py-3 md:py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group text-sm md:text-base">
-              Pedir
+            <button id="btnModalOrder" data-id="${p.id}" class="w-full bg-[#D37B60] hover:bg-[#E59275] text-white font-bold py-3 md:py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 group text-sm md:text-base">
+              Pedir por WhatsApp
               <span class="group-hover:translate-x-1 transition-transform">→</span>
             </button>
           </div>
@@ -166,10 +173,18 @@ function sendToWhatsApp(id) {
   const p = PHONES.find(x => x.id === id);
   if (!p) return;
   const phoneNumber = "77777777";
+  
+  let optionsText = "";
+  if (p.presentations && p.presentations.length > 0) {
+    optionsText = "- Opciones:\n" + p.presentations.map(pres => `  * ${pres.weight} - ${pres.price} Bs.`).join('\n');
+  } else {
+    optionsText = `- Precio: ${p.price} Bs. (${p.storage})`;
+  }
+  
   const message = `¡Hola Sabores Biobío! Quiero hacer un pedido de:
 - Producto: ${p.model}
 - Variedad: ${p.brand}
-- Precio: ${p.price} Bs.
+${optionsText}
   
 ¿Podrían confirmarme la disponibilidad?`;
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
