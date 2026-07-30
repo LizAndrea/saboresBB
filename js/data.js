@@ -1,0 +1,243 @@
+const PHONES =
+[
+  {
+    "id": 1,
+    "brand": "Línea Oro Marrón",
+    "model": "Semillas de CACAO HIBRIDO sin tostar",
+    "storage": "1 kg",
+    "price": 200.0,
+    "image": "assets/images/productos/1.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo o tostar al gusto. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 2,
+    "brand": "Línea Oro Marrón",
+    "model": "Semillas tostadas de CACAO HIBRIDO artesanal",
+    "storage": "1 kg",
+    "price": 215.0,
+    "image": "assets/images/productos/2.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Cacao tostado, una experiencia auténtica y nutritiva.. Tostado artesanal. Cacao amazónico 100% natural y puro.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 3,
+    "brand": "Línea Oro Marrón",
+    "model": "Semillas de CACAO SILVESTRE CRIOLLO Sin tostar",
+    "storage": "1 kg",
+    "price": 215.0,
+    "image": "assets/images/productos/3.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Fuente de energía natural.. Mayor contenido de cualidades nutritivas y medicinales. Cacao amazónico 100% natural y puro.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo o tostar. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 4,
+    "brand": "Línea Oro Marrón",
+    "model": "Cacao Molido",
+    "storage": "40 gr",
+    "price": 22.0,
+    "image": "assets/images/productos/4.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Molido artesanal. Textura granulada con trozos de cacao.. Para disfrutar del cacao 100% natural de manera más práctica. Conserva trozos de cacao.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Para consumo puro, en batidos, etc. "
+  },
+  {
+    "id": 5,
+    "brand": "Línea Oro Marrón",
+    "model": "Manteca de cacao rústica 100% natural",
+    "storage": "Estándar",
+    "price": 0,
+    "image": "assets/images/productos/5.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Excepcional cualidad hidratante.. Para uso en cuidado personal. Para chocolatería y gastronomía.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Uso cosmético o culinario. "
+  },
+  {
+    "id": 6,
+    "brand": "Línea Oro Marrón",
+    "model": "Chocolágeno (colágeno simple)",
+    "storage": "40 gr",
+    "price": 23.0,
+    "image": "assets/images/productos/6.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Cacao molido + colágeno simple (gelatina sin sabor).. Potente aporte al cuidado de la salud articular y el bienestar emocional. Magnesio natural. 50% Cacao molido + 50% colágeno.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Una cuchara en 1/4 de taza de agua caliente. Revolver hasta diluir. Preferible después del desayuno. Tips: añadir canela y/o miel. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 7,
+    "brand": "Línea Oro Marrón",
+    "model": "Chocolágeno (colágeno hidrolizado)",
+    "storage": "40 gr",
+    "price": 26.0,
+    "image": "assets/images/productos/7.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Cacao molido + colágeno hidrolizado (diluye y absorbe más rápido).. Potente aporte al cuidado de la salud articular y el bienestar emocional. Magnesio natural. 50% Cacao molido + 50% colágeno.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Una cuchara en 1/4 de taza de agua caliente. Revolver hasta diluir. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 8,
+    "brand": "Línea Oro Marrón",
+    "model": "Tabletas de chocolate negro 85% de cacao",
+    "storage": "80 gr",
+    "price": 24.0,
+    "image": "assets/images/productos/8.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Bocado a bocado, deleite y energía natural.. Para consumo directo. Sabores BioBio es Agente exclusivo de distribución de chocolates amargo Ambaibo a nivel nacional.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo. "
+  },
+  {
+    "id": 9,
+    "brand": "Línea Oro Marrón",
+    "model": "Cocoa intensidad extra",
+    "storage": "150 gr",
+    "price": 35.0,
+    "image": "assets/images/productos/9.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Intensidad de aroma, color y sabor de cacao con fibra extra.. 65% cocoa roja molido impalpable, 35% cocoa negra molido rústico. Contiene 22-25% g. de proteína x 100gr. 100% natural, cero azúcar, cero conservantes.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Para repostería, para preparación con agua o con leche. "
+  },
+  {
+    "id": 10,
+    "brand": "Línea Oro Marrón",
+    "model": "Pasta rústica artesanal de CACAO SILVESTRE",
+    "storage": "100 gr",
+    "price": 32.0,
+    "image": "assets/images/productos/10.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Pasta de cacao rústica elaborada con cacao silvestre-criollo del Beni.. 100% natural. Máxima intensidad y alto contenido.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Para preparar con agua, con leche, para chocolatería. "
+  },
+  {
+    "id": 11,
+    "brand": "Línea Oro Marrón",
+    "model": "Infusión de cacao",
+    "storage": "40 gr",
+    "price": 22.0,
+    "image": "assets/images/productos/11.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Sutil y saciante, de sutil aroma y sabor a cacao.. Un abrazo que se bebe y proporciona saciedad y bienestar. Elaborada en base a cacao, con especias. Deliciosa y saludable alternativa al té o café.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Para consumir caliente o frío. "
+  },
+  {
+    "id": 12,
+    "brand": "Línea Oro Marrón",
+    "model": "Snack Mix de nibs de cacao c/ frutos secos gourmet",
+    "storage": "40 gr",
+    "price": 20.0,
+    "image": "assets/images/productos/12.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Snack saludable de cacao silvestre criollo.. Tostado con leña y en perol, pelado y trozado de 1era. calidad. Una dosis de energía natural con sabor intenso. (Opción nibs puros).<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Para disfrutarlos puros o acompañar postres, helados, yogurt y más. Ingredientes y Preparación\nPulpa de açaí: 100 gramos congelada.\nPlátano: 1 unidad congelada en trozos.\nLíquido: 2 a 3 cucharadas de leche (vegetal o normal) o jugo de fruta para ayudar a licuar.\nToppings: Frutas frescas (fresa, banano), frutos secos o chía al gusto.\nLicuar: Pon la pulpa y el plátano en la licuadora con poco líquido para que quede espeso como un helado.\nServir: Coloca en un bol y agrega los ingredientes extra arriba"
+  },
+  {
+    "id": 13,
+    "brand": "Línea Oro Marrón",
+    "model": "Snack Mix de PREMIUM CACAO SILVESTRE CRIOLLO",
+    "storage": "40 gr",
+    "price": 23.0,
+    "image": "assets/images/productos/13.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Snack Mix premium saludable, granos enteros de cacao.. Tostado con leña en perol. Una dosis de energía natural intensa, realzado con texturas crocantes y sabores agridulces de frutos secos gourmet. (Opción puros o Mix).<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo o acompañante. "
+  },
+  {
+    "id": 14,
+    "brand": "Línea Oro Marrón",
+    "model": "Fruto de cacao silvestre",
+    "storage": "A pedido",
+    "price": 0,
+    "image": "assets/images/productos/14.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Altísima cualidad antioxidante, desinflamante.. Producto a ser encargado, previa reservación confirmada.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong>  "
+  },
+  {
+    "id": 15,
+    "brand": "Línea Frescor Amazónico",
+    "model": "Asaí (Pulpa congelada)",
+    "storage": "1/2 kg",
+    "price": 25.0,
+    "image": "assets/images/productos/15.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Producción de cosecha silvestre. Alto contenido de antioxidantes.. Combate el envejecimiento celular. Rico en vitaminas (A,C,E,B), minerales, fibra y grasas saludables.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Batidos, jugos. "
+  },
+  {
+    "id": 16,
+    "brand": "Línea Frescor Amazónico",
+    "model": "Copuazú (Pulpa congelada)",
+    "storage": "1/2 kg",
+    "price": 25.0,
+    "image": "assets/images/productos/16.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Rico en Vitaminas A,C y E, complejo B, y minerales.. Antioxidantes y ácidos grasos saludables. Mejoran la piel, cabello y salud cardiovascular.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Batidos, jugos. "
+  },
+  {
+    "id": 17,
+    "brand": "Línea Frescor Amazónico",
+    "model": "Maracuyá (Pulpa congelada)",
+    "storage": "1 kg",
+    "price": 50.0,
+    "image": "assets/images/productos/17.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Alto contenido de vitamina C, fortalece el sistema inmunitario.. Gracias a sus flavonoides, mejora la calidad del sueño y calma la ansiedad. Ayuda a reducir el colesterol.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Batidos, jugos. "
+  },
+  {
+    "id": 18,
+    "brand": "Línea Frescor Amazónico",
+    "model": "Majo (Pulpa congelada)",
+    "storage": "1/2 kg",
+    "price": 25.0,
+    "image": "assets/images/productos/18.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Fruto de palmera amazónica, excepcional contenido de proteínas.. Calidad nutritiva comparada con la leche materna. Alternativa complementaria de dietas veganas y vegetarianas.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Leche chocolatada, batidos. "
+  },
+  {
+    "id": 19,
+    "brand": "Línea Frescor Amazónico",
+    "model": "Achachahirú (Pulpa congelada)",
+    "storage": "1/2 kg",
+    "price": 28.0,
+    "image": "assets/images/productos/19.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Delicioso fruto refrescante, agridulce.. Alto contenido de vitamina C, fibra y antioxidantes. Superalimento bajo en calorías que fortalece el sistema inmunológico, ayuda a la digestión, hidrata.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Batidos, jugos. "
+  },
+  {
+    "id": 20,
+    "brand": "Harinas Integrales",
+    "model": "Harina de almendra",
+    "storage": "500 gr",
+    "price": 40.0,
+    "image": "assets/images/productos/20.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Baja en carbohidratos y sin gluten.. Rica en grasas saludables, monoinsaturadas, omega-3 y 6, proteínas, fibra, vitamina E y minerales como magnesio y calcio.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Jugos vitamínicos, repostería, postres. Ayuda a espesar salsas. "
+  },
+  {
+    "id": 21,
+    "brand": "Harinas Integrales",
+    "model": "Harina de coco",
+    "storage": "500 gr",
+    "price": 50.0,
+    "image": "assets/images/productos/21.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Rica en fibra, proteínas y minerales, sin gluten.. Bajo índice glucémico y grasas saludables. Provoca saciedad, regula el tránsito intestinal y ayuda a controlar el azúcar en la sangre.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Jugos vitamínicos, repostería, postres. "
+  },
+  {
+    "id": 22,
+    "brand": "Harinas Integrales",
+    "model": "H. de plátano verde o chila",
+    "storage": "1/2 Kg",
+    "price": 35.0,
+    "image": "assets/images/productos/22.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Rica en almidón resistente (AR) y fibra.. Ayuda a mejorar la digestión. Aumenta la saciedad y ayuda a controlar el azúcar en sangre y el colesterol.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Jugos vitamínicos, repostería, postres. "
+  },
+  {
+    "id": 23,
+    "brand": "Harinas Integrales",
+    "model": "Almendra partida",
+    "storage": "500 gr",
+    "price": 65.0,
+    "image": "assets/images/productos/23.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Baja en carbohidratos y sin gluten. Cosecha 2026.. Rica en grasas saludables, monoinsaturadas, omega-3 y 6, proteínas, fibra, vitamina E y minerales como magnesio y calcio.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Repostería, consumo directo. "
+  },
+  {
+    "id": 24,
+    "brand": "Harinas Integrales",
+    "model": "Almendra entera",
+    "storage": "500 gr",
+    "price": 70.0,
+    "image": "assets/images/productos/24.jpg",
+    "seller": "Sabores Biobío",
+    "desc": "<strong>Descripción:</strong> Baja en carbohidratos y sin gluten. Cosecha 2026.. Rica en grasas saludables, monoinsaturadas, omega-3 y 6, proteínas, fibra, vitamina E y minerales como magnesio y calcio.<br><br><strong>Detalles:</strong> Cacao sin tostar para una experiencia auténtica y nutritiva.. Opción de consumo directo o para tostarlo a su gusto. Cacao amazónico 100% natural y puro.<br><br><strong>Uso/Recetas:</strong> Consumo directo, snacks. "
+  }
+];
