@@ -162,7 +162,7 @@ function renderBrands() {
   if (!container) return;
 
   let html = `
-    <button class="brand-chip active flex-shrink-0 snap-start w-36 h-20 md:w-56 md:h-28 flex items-center justify-center rounded-[20px] bg-dark-olive text-white font-bold shadow-md hover:shadow-lg transition text-sm md:text-lg relative overflow-hidden" data-brand="all">
+    <button class="brand-chip active flex-shrink-0 snap-start w-32 h-16 md:w-56 md:h-28 flex items-center justify-center rounded-[20px] bg-dark-olive text-white font-bold shadow-md hover:shadow-lg transition text-sm md:text-lg relative overflow-hidden" data-brand="all">
       <span class="relative z-10 text-center px-2">Todo</span>
     </button>
   `;
@@ -172,7 +172,7 @@ function renderBrands() {
   brands.forEach((brand, idx) => {
     const bg = colors[idx % colors.length];
     html += `
-      <button class="brand-chip flex-shrink-0 snap-start w-36 h-20 md:w-56 md:h-28 flex items-center justify-center rounded-[20px] ${bg} text-white font-bold shadow-md hover:shadow-lg transition text-sm md:text-lg relative overflow-hidden group" data-brand="${brand}">
+      <button class="brand-chip flex-shrink-0 snap-start w-32 h-16 md:w-56 md:h-28 flex items-center justify-center rounded-[20px] ${bg} text-white font-bold shadow-md hover:shadow-lg transition text-sm md:text-lg relative overflow-hidden group" data-brand="${brand}">
         <div class="absolute inset-0 bg-black/20 transition-colors duration-300 group-hover:bg-black/40"></div>
         <span class="relative z-10 drop-shadow-md text-center px-2 leading-tight">${brand}</span>
       </button>
